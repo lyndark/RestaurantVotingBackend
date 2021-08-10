@@ -7,7 +7,7 @@ var database = mysql.createPool({ // createpool = provedor de conexão
     database: 'voting_result'
 });
 
-
+// exportando o pool de conexões
 module.exports = {
     database 
 } 

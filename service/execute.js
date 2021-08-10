@@ -21,7 +21,7 @@ function executeQuery(response, sqlQuery, params = []) {
     }
 
     //se der falha na conexão retorna 'error', se conectada com sucesso retorna 'connection'.
-    function callbackConnection(error, connection) { 
+    function callbackConnection(error, connection) {
 
         if (error)
             //se o erro existir retorna o erro de conexão
@@ -35,4 +35,6 @@ function executeQuery(response, sqlQuery, params = []) {
      callback vai ser chamada se der falha ou sucesso na conexão */
     database.getConnection(callbackConnection)
 }
-module.exports = {executeQuery}
+
+//exportando a função que executa a query
+module.exports = { executeQuery }
