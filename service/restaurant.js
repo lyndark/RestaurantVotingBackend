@@ -11,8 +11,13 @@ function postRestaurant(request, response) {
     const paramsSql = [name] //parametros que serão interpolados na string literal de sql
     executeQuery(response, sqlQuery, paramsSql) //executando a query sql
 }
+function getRestaurants(request, response) {
+    const sqlQuery = 'SELECT * FROM restaurants'
+    executeQuery(response, sqlQuery)
+}
+
 
 //exportando as funções 
 module.exports = {
-    postRestaurant
+    postRestaurant, getRestaurants
 }

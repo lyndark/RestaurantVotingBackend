@@ -12,8 +12,9 @@ function executeQuery(response, sqlQuery, params = []) {
     function callbackQuery(error, result) {
 
         if (error) {
+            console.log(error)
             //se o erro existir retorna o erro da sql
-            return response.status(400).send(error)
+            return response.status(400).send(error.sqlMessage)
         }
 
         //senão manda o resultado da query

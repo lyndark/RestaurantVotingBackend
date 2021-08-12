@@ -1,6 +1,6 @@
-const http = require ('http') //importando pacote http
+const http = require ('http') //importando pacote http que cria uma conexão http
 const app = require ('../server/app') //importando nosso objeto app
-const server = http.createServer(app) //?
+const server = http.createServer(app) //
 
 console.log('\n >>> back end rodando na porta 3000 <<< \n')
 
